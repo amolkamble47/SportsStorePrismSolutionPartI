@@ -1,0 +1,25 @@
+﻿<Window x:Class="SportsStorePrismWpfApp.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportsStorePrismWpfApp"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:infra="clr-namespace:SportsStorePrism.Infrastructure;assembly=SportsStorePrism.Infrastructure"
+        mc:Ignorable="d"
+        Title="Shell" Height="600" Width="800">
+
+    <DockPanel LastChildFill="True">
+        <ContentControl DockPanel.Dock="Top"
+            prism:RegionManager.RegionName="{x:Static infra:RegionNames.ToolBarRegion}"/>
+        <ContentControl DockPanel.Dock="Bottom"
+            prism:RegionManager.RegionName="{x:Static infra:RegionNames.StatusBarRegion}"/>
+        <ContentControl
+            prism:RegionManager.RegionName="{x:Static infra:RegionNames.ProductRegion}"/>
+    </DockPanel>
+    
+    
+    <!--<Grid>
+        <TextBlock Text="This is the Shell"/>
+    </Grid>-->
+</Window>
